@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newEventFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewEventFragment">
+
+    <TextView
+        android:id="@+id/newEventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:fontFamily="sans-serif-black"
+        android:text="New Event"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    
+    <EditText
+        android:id="@+id/inputTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minEms="5"
+        android:maxLength="24"
+        android:inputType="textAutoCorrect"
+        android:hint="Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newEventTitle" />
+    <EditText
+        android:id="@+id/inputCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minEms="5"
+        android:maxLength="24"
+        android:inputType="textAutoCorrect"
+        android:hint="Category"
+        app:layout_constraintTop_toBottomOf="@+id/inputTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/inputLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minEms="5"
+        android:maxLength="24"
+        android:inputType="textAutoCorrect"
+        android:hint="Location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputCategory" />
+
+    <DatePicker
+        android:id="@+id/inputeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLocation" />
+
+    <TimePicker
+        android:id="@+id/inputTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputeDate" />
+    <Button
+        android:id="@+id/createEvent"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_margin="12dp"
+        android:text="Create Event"
+        app:layout_constraintTop_toBottomOf="@id/inputTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
